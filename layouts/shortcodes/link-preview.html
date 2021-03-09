@@ -1,0 +1,7 @@
+
+{{- $url := .Get "url" | default (.Get 0) -}}
+{{- $class := .Get "class" | default (.Get 1) }}
+<div {{ with $class }}class="{{ . }}"{{ else }}style=""{{ end }}>
+  <a target="_blank" href="{{ $url }}">{{ $url }}</a>
+</div>
+
